@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= @title || "Reddit Mobile" %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div data-role="page" data-theme="a" data-title="<%= @title || "Reddit Mobile" %>">
+	
+		<div data-role="header" data-position="inline">
+			<h1><%= @title || "Reddit Mobile" %></h1>
+		</div>
+	
+		<div data-role="content" data-theme="b">	
+			<%= yield %>		
+		</div>
+		
+		<div data-role="footer">
+					
+		</div>
+	
+	</div>
+
+</body>
+</html>
